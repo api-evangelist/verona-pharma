@@ -1,0 +1,16 @@
+generated: '2026-10-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.veronapharma.com
+  https: false
+domains:
+- domain: veronapharma.com
+  dnssec: false
+  caa:
+  - 0 issue "sectigo.com"
+  - 0 issue "letsencrypt.org"
+  - 0 iodef "mailto:soc@veronapharma.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
